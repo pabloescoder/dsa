@@ -169,7 +169,7 @@ public class KthSmallestElement {
     // but, to recur for one of them, according to the position of the pivot
     // ASSUMPTION: ALL ELEMENTS IN INPUT ARRAY ARE DISTINCT
     // Time complexity - O(n)
-    // Space complexity - O(K) - To store the max heap array
+    // Space complexity - O(log n) - Recursive calls
 
     public static int kthSmallestByQuickSelect(int[] arr, int start, int end, int k) {
         if (k > 0 && k <= end - start + 1) {
@@ -197,12 +197,12 @@ public class KthSmallestElement {
         int[] arr1 = {7, 4, 10, 20, 15};
         int[] arr2 = {7, 4, 10, 20, 15};
         int[] arr3 = {7, 4, 10, 20, 15};
-        int[] arr4 = {7, 15, 10, 20, 4};
+        int[] arr4 = {7, 4, 10, 20, 15};
         int k = 4;
 
         System.out.println(kthSmallestBySorting(arr1, k)); // 15
         System.out.println(kthSmallestByMaxHeap(arr2, k)); // 15
         System.out.println(kthSmallestByPriorityQueue(arr3, k)); // 15
-        System.out.println(kthSmallestByQuickSelect(arr4, 0, arr4.length - 1, k));
+        System.out.println(kthSmallestByQuickSelect(arr4, 0, arr4.length - 1, k)); // 15
     }
 }
