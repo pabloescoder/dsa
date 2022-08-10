@@ -10,7 +10,7 @@ package Array;
 // Time Complexity - O(nlogn)
 // Space Complexity - O(logn)
 
-// Approach (Code at line 48 onwards)
+// Approach (Code at line 63 onwards)
 // Sort the array
 // Assume that there is a point (a point is BETWEEN 2 elements in the array),
 // On the left of the point, add k to all the elements.
