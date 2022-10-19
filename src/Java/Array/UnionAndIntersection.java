@@ -3,7 +3,7 @@
 // https://www.geeksforgeeks.org/find-union-and-intersection-of-two-unsorted-arrays/
 // https://www.geeksforgeeks.org/union-and-intersection-of-two-sorted-arrays-2/
 
-package Array;
+package Java.Array;
 
 // Given two arrays a[] and b[] of size n and m respectively. The task is to find union between these two arrays.
 // Union of the two arrays can be defined as the set containing distinct elements from both the arrays.

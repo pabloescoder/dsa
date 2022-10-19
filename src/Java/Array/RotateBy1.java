@@ -1,6 +1,6 @@
 // https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one/0
 
-package Array;
+package Java.Array;
 
 // Given an array, rotate the array by one position in clock-wise direction.
 // Time Complexity - O(n)

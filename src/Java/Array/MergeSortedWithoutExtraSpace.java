@@ -1,6 +1,6 @@
 // https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays/0
 
-package Array;
+package Java.Array;
 
 // Given two sorted arrays arr1[] and arr2[] of sizes n and m in non-decreasing order.
 // Merge them in sorted order without using any extra space.

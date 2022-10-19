@@ -1,7 +1,7 @@
 // https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps/0
 // Reference: https://www.baeldung.com/cs/minimum-jumps-to-reach-array-end
 
-package Array;
+package Java.Array;
 
 // Given an array of N integers arr[] where each element represents
 // the max length of the jump that can be made forward from that element.

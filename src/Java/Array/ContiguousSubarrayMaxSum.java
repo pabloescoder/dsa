@@ -1,7 +1,7 @@
 // https://practice.geeksforgeeks.org/problems/kadanes-algorithm/0
 // Kadane's Algorithm : https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
 
-package Array;
+package Java.Array;
 
 // Given an array Arr[] of N integers.
 // Find the contiguous sub-array(containing at least one number) which has the maximum sum and return its sum.

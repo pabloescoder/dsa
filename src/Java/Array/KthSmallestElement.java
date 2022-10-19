@@ -10,7 +10,7 @@
 
 // Increasing order of time complexities = O(Approach 4) < O(Approach 2) < O(Approach 3) < O(Approach 1)
 
-package Array;
+package Java.Array;
 
 import java.util.Arrays;
 import java.util.Collections;

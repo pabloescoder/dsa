@@ -1,6 +1,6 @@
 // https://practice.geeksforgeeks.org/problems/inversion-of-array/0
 
-package Array;
+package Java.Array;
 
 // Given an array of integers. Find the Inversion Count in the array.
 //

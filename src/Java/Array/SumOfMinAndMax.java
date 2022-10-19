@@ -3,7 +3,7 @@
 // Time Complexity O(n)
 // Space Complexity O(1)
 
-package Array;
+package Java.Array;
 
 public class SumOfMinAndMax {
     public static int findSum(int[] arr) {

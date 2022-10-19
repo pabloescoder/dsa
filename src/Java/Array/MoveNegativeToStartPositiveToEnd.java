@@ -2,7 +2,7 @@
 // Reference articles :-
 // https://www.geeksforgeeks.org/rearrange-positive-and-negative-numbers/
 
-package Array;
+package Java.Array;
 
 // An array contains both positive and negative numbers in random order.
 // Rearrange the array elements so that all negative numbers appear before all positive numbers.
@@ -46,7 +46,7 @@ public class MoveNegativeToStartPositiveToEnd {
     // If there are more than one positive elements between the last negative number in the left subarray
     // and the current negative element.
 
-    // Current Array :- [Ln, P1, P2, P3, N1, .......]
+    // Current Java.Array :- [Ln, P1, P2, P3, N1, .......]
     // Here, Ln is the left subarray(can be empty) that contains only negative elements.
     // P1, P2, P3 are the positive numbers and N1 is the negative number that we want to move at correct place.
     // If difference of indices between positive number and negative number is greater than 1,
@@ -80,7 +80,7 @@ public class MoveNegativeToStartPositiveToEnd {
     public static void main(String[] args) {
         int[] arr = {-12, 11, -13, -5, 6, -7, 5, -3, -6};
         int[] arr2 = {-12, 11, -13, -5, 6, -7, 5, -3, -6};
-        System.out.println("Initial Array: " + Arrays.toString(arr) + System.lineSeparator());
+        System.out.println("Initial Java.Array: " + Arrays.toString(arr) + System.lineSeparator());
         move(arr);
         moveWhileMaintainingOrder(arr2);
         System.out.println(Arrays.toString(arr));

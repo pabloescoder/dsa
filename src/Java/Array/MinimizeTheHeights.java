@@ -1,7 +1,7 @@
 // https://practice.geeksforgeeks.org/problems/minimize-the-heights/0
 // Reference Video: https://www.youtube.com/watch?v=29uyA4F9t5I
 
-package Array;
+package Java.Array;
 
 // Given heights of n towers and a value k.
 // We need to either increase or decrease the height of every tower by k (only once) where k > 0.
@@ -19,7 +19,7 @@ package Array;
 
 // Approach - Additional Details
 // Our array has 2 segments after following the above approach,
-// (A[0]+k, A[1]+k, ..., A[i]+k, A[i+1]-k, A[i+2]-k, ..., A[n]-k)      (n = Array length)
+// (A[0]+k, A[1]+k, ..., A[i]+k, A[i+1]-k, A[i+2]-k, ..., A[n]-k)      (n = Java.Array length)
 // The first segment (in which we added k) is to the left of our point, A[i]+k is the last element of the first segment
 // The second segment (in which we subtracted k) is to the right of the point, A[i+1]-k is the first element of the second segment
 

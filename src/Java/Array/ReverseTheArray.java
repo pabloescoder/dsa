@@ -1,7 +1,7 @@
 // Time Complexity O(n)
 // Space Complexity O(1)
 
-package Array;
+package Java.Array;
 
 import java.util.Arrays;
 
