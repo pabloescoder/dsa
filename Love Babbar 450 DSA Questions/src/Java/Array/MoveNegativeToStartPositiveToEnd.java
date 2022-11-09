@@ -38,7 +38,7 @@ public class MoveNegativeToStartPositiveToEnd {
 
     // Approach 2 - Modified Partition Process of QuickSort
     // Order of negative & positive numbers corresponding to input array is maintained
-    // Time Complexity: O(n)
+    // Time Complexity: O(n^2)
     // Space Complexity: O(1)
 
     // We can reverse the order of positive numbers whenever the relative order is changed.
