@@ -8,7 +8,7 @@
 // Given an array of size n and an integer k, find all elements in the array that appear more than n/k times.
 using namespace std;
 
-// Approach 1 - Using unordered_set
+// Approach 1 - Using unordered_map
 // Store the count of how many times each elements occurs (frequency count)
 // Add all the elements that occur more than n/k times to the final vector
 // Return that vector
