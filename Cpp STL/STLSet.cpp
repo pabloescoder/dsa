@@ -1,5 +1,6 @@
 #include <iostream>
 #include <set>
+#include <unordered_set> // For unordered_set
 
 // STL Set stores only unique elements. Implemented using BST.
 // Since STL Set uses BST, elements are stored in sorted order.
@@ -13,7 +14,8 @@ int main()
 {
     set<int> s;
 
-    // Inserting element - Complexity is O(log n) (BST)
+    // Inserting element - Complexity is O(log n) for set (BST)
+    //                   - Complexity is O(1) for unordered_set (hashing)
     // Set stores unique elements in sorted order.
     s.insert(10);
     s.insert(-20);
