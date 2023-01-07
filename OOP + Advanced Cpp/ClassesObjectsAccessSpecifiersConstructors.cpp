@@ -1,0 +1,61 @@
+#include <iostream>
+#include <string>
+using std::cout;
+using std::string;
+
+class Employee
+{
+private: // It is private by default so not needed, but written for readability
+    int uid;
+    string name;
+    string company;
+    int age;
+
+public:
+    Employee()
+    {
+        this->name = "";
+        this->company = "";
+        this->age = -1;
+    }
+
+    // Constructor overloading
+    Employee(string name, string company, int age)
+    {
+        this->name = name;
+        this->company = company;
+        this->age = age;
+    }
+
+    void giveIntro()
+    {
+        cout << "\nHello, my name is " << name;
+        cout << "\nI work in " << company;
+        cout << "\nI'm " << age << " years old.";
+    }
+
+    // Getters and Setters - Gives more control over class attributes
+    void setName(string name)
+    {
+        // Regex expression to check if name is valid, if not throw error
+        this->name = name;
+    }
+
+    string getName()
+    {
+        return name;
+    }
+};
+
+int main()
+{
+    Employee e1("Dhroov", "Google", 20);
+    cout << "Printing info about employee " << e1.getName() << ":-";
+    // cout << e1.name // Error
+    e1.giveIntro();
+    cout << '\n';
+
+    Employee e2;
+    e2.setName("Gojo");
+    e2.giveIntro();
+}
