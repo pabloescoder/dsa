@@ -8,7 +8,7 @@
 // Unordered_Set is faster than Set
 // Code and methods for Unordered_Set are the same as Set, just the time complexities are different.
 using namespace std;
-void printSet(const set<int> s);
+void printSet(const set<int> &s);
 
 int main()
 {
@@ -52,7 +52,7 @@ int main()
     return 0;
 }
 
-void printSet(const set<int> s)
+void printSet(const set<int> &s)
 {
     // Printing set elements
     for (int i : s)
