@@ -123,6 +123,14 @@ public:
             cout << "Linked List is empty. Nothing to delete.\n";
             return;
         }
+        else if (head->next == nullptr)
+        {
+            delete head;
+            head = nullptr;
+            tail = nullptr;
+            return;
+        }
+
         Node *end = head;
         Node *prev = head;
         while (end->next != nullptr)
@@ -140,6 +148,13 @@ public:
         if (head == nullptr)
         {
             cout << "Linked List is empty. Nothing to delete.\n";
+            return;
+        }
+        else if (head->next == nullptr && index == 0)
+        {
+            delete head;
+            head = nullptr;
+            tail = nullptr;
             return;
         }
 

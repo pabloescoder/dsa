@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-void swap(int *, int *);
-
 class MaxHeap
 {
     int *arr;
@@ -124,26 +122,11 @@ int main()
     mh.push(0);
     mh.push(25);
     cout << mh.isEmpty() << '\n';
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
+    while (!mh.isEmpty())
+    {
+        cout << mh.top() << '\n';
+        mh.pop();
+    }
     mh.pop();
     cout << mh.isEmpty() << '\n';
-}
-
-void swap(int *num1, int *num2)
-{
-    int temp = *num1;
-    *num1 = *num2;
-    *num2 = temp;
 }

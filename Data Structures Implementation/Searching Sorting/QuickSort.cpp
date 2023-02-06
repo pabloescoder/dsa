@@ -3,13 +3,6 @@ using namespace std;
 
 void printArr(int *arr, int n);
 
-void swap(int *num1, int *num2)
-{
-    int temp = *num1;
-    *num1 = *num2;
-    *num2 = temp;
-}
-
 int partition(int *arr, int start, int end)
 {
     int pivot = arr[end];

@@ -52,16 +52,11 @@ public:
         BstNode *prevNode = nullptr;
         while (currNode)
         {
+            prevNode = currNode;
             if (data <= currNode->data)
-            {
-                prevNode = currNode;
                 currNode = currNode->left;
-            }
             else if (data > currNode->data)
-            {
-                prevNode = currNode;
                 currNode = currNode->right;
-            }
         }
         if (data <= prevNode->data)
             prevNode->left = newNode;
@@ -109,18 +104,18 @@ public:
         }
         else // Node to be deleted has 2 children
         {
-            BstNode *prevMin = nullptr;
+            BstNode *prevMinInRightSubtree = nullptr;
             BstNode *minInRightSubtree = currNode->right;
             while (minInRightSubtree->left != nullptr)
             {
-                prevMin = minInRightSubtree;
+                prevMinInRightSubtree = minInRightSubtree;
                 minInRightSubtree = minInRightSubtree->left;
             }
             currNode->data = minInRightSubtree->data;
-            if (prevMin == nullptr)
+            if (prevMinInRightSubtree == nullptr)
                 currNode->right = minInRightSubtree->right;
             else
-                prevMin->left = minInRightSubtree->right;
+                prevMinInRightSubtree->left = minInRightSubtree->right;
             delete minInRightSubtree;
         }
     }
@@ -131,17 +126,11 @@ public:
         while (currNode)
         {
             if (data < currNode->data)
-            {
                 currNode = currNode->left;
-            }
             else if (data > currNode->data)
-            {
                 currNode = currNode->right;
-            }
             else
-            {
                 return true;
-            }
         }
         return false;
     }
@@ -160,11 +149,11 @@ public:
         {
             BstNode *current = discovered.front();
             cout << current->data << " ";
+            discovered.pop();
             if (current->left != nullptr)
                 discovered.push(current->left);
             if (current->right != nullptr)
                 discovered.push(current->right);
-            discovered.pop();
         }
         cout << endl;
     }
@@ -233,14 +222,14 @@ public:
 
         while (!s.empty())
         {
-            BstNode *curr = s.top();
+            BstNode *current = s.top();
             s.pop();
-            output.push(curr->data);
+            output.push(current->data);
 
-            if (curr->left)
-                s.push(curr->left);
-            if (curr->right)
-                s.push(curr->right);
+            if (current->left)
+                s.push(current->left);
+            if (current->right)
+                s.push(current->right);
         }
 
         while (!output.empty())

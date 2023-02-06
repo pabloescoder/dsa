@@ -29,12 +29,14 @@ int main()
     printMap(m);
 
     // Look for a particular key
-    cout << "Is 10 present in the Map? " << m.count(10) << '\n';
-    cout << "Is 200 present in the Map? " << m.count(200) << '\n';
+    cout << "Is the key 10 present in the Map? " << m.count(10) << '\n';
+    cout << "Is the key 200 present in the Map? " << m.count(200) << '\n';
 
     // Find the value for a corresponding key
     // Method 1 - .at() - IMP: This returns an exception if the key is not present in the map
     cout << "Value of key '10' is: " << m.at(10) << '\n';
+    cout << "Value of key '10' is: " << m[10] << '\n'; // Alternative syntax
+
     // Method 2 - .find() - Returns an iterator
     map<int, string>::iterator it = m.find(10);
     if (it != m.end())

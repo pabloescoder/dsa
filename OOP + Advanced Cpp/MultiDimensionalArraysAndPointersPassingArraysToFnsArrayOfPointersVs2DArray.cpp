@@ -98,7 +98,7 @@ int main()
 
         numCols[i] = numRows * (i + 1);
         // Storing values in the inner arrays - Just for demonstration purposes
-        for (int j = 0; j < numRows * (i + 1); j++)
+        for (int j = 0; j < numCols[i]; j++)
         {
             arrayOfPtrs[i][j] = (i + 1) * (j + 1);
         }
@@ -123,7 +123,7 @@ void print2DimArray(int arr[][3], int rows)
     for (int i = 0; i < rows; i++)
     {
         cout << "  [ ";
-        for (int j = 0; j < 2; j++)
+        for (int j = 0; j < 3; j++)
         {
             cout << arr[i][j] << " ";
         }

@@ -2,7 +2,6 @@
 using namespace std;
 
 void printArr(int *arr, int n);
-int stepCount = 0;
 
 void merge(int *arr, int start, int mid, int end)
 {
@@ -14,7 +13,7 @@ void merge(int *arr, int start, int mid, int end)
     for (int i = 0; i < leftSize; i++)
         left[i] = arr[start + i];
     for (int i = 0; i < rightSize; i++)
-        right[i] = arr[mid + i + 1];
+        right[i] = arr[mid + 1 + i];
 
     int leftP = 0;
     int rightP = 0;

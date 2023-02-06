@@ -23,9 +23,9 @@ int main()
     printList(l);
 
     // Accessing elements - Direct access not allowed. O(n) access complexity.
-    list<int>::iterator it = l.begin(); // Initialize list iterator and point it to the first entry
-    advance(it, 1);                     // Make it point to the second element in the list
-    cout << "Element at index 2 in list: " << *it << '\n';
+    list<int>::iterator it = l.begin(); // Initialize list iterator and point it to the first entry (index 0)
+    advance(it, 1);                     // Make it point to the second element in the list (index 1)
+    cout << "Element at index 1 in list: " << *it << '\n';
 
     // Size of list
     cout << "Size: " << l.size() << '\n';

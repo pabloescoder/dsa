@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-void swap(int *, int *);
-
 class MinHeap
 {
     int *arr;
@@ -14,6 +12,7 @@ class MinHeap
         int l = (i * 2) + 1; // Left child index
         int r = (i * 2) + 2; // Right child index
         int min = i;
+
         if (l < length && arr[l] < arr[i])
         {
             min = l;
@@ -73,6 +72,7 @@ public:
     {
         if (length == maxLength - 1)
             increaseSize();
+
         arr[length++] = data;
         heapifyUp(length - 1);
     }
@@ -93,7 +93,7 @@ public:
     {
         if (length == 0)
         {
-            return INT_MIN;
+            return INT_MAX;
         }
         return arr[0];
     }
@@ -122,26 +122,11 @@ int main()
     mh.push(0);
     mh.push(25);
     cout << mh.isEmpty() << '\n';
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
-    mh.pop();
-    cout << mh.top() << '\n';
+    while (!mh.isEmpty())
+    {
+        cout << mh.top() << '\n';
+        mh.pop();
+    }
     mh.pop();
     cout << mh.isEmpty() << '\n';
-}
-
-void swap(int *num1, int *num2)
-{
-    int temp = *num1;
-    *num1 = *num2;
-    *num2 = temp;
 }
