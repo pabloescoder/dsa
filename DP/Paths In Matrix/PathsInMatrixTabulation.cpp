@@ -96,6 +96,7 @@ int pathsSpaceOptimised(const vector<vector<int>> &matrix)
             else // Paths from top = prevDp[j] &&&& Paths from left = dp[j - 1]
                 dp[j] = prevDp[j] + dp[j - 1];
         }
+        delete[] prevDp;
         prevDp = dp;
         dp = new int[m];
     }

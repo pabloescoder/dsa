@@ -89,6 +89,7 @@ int costSpaceOptimised(const vector<vector<int>> &matrix)
             // For every element at index j in dp, the user can come from the top (prevDp[j]) or the left (dp[j-1])
             dp[j] = matrix[i][j] + min(prevDp[j], dp[j - 1]);
         }
+        delete[] prevDp;
         prevDp = dp;
         dp = new int[m];
     }
