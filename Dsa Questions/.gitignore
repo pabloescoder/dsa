@@ -2,5 +2,5 @@
 .vscode/
 out/
 450-dsa-questions.iml
-src/Cpp/.vscode/
-src/Cpp/*/*.exe
+Cpp/.vscode/
+Cpp/*/*.exe
