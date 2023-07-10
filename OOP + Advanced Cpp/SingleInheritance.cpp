@@ -56,6 +56,7 @@ public:
         cout << "Registration ID: " << getRegID() << '\n';
         cout << "Name: " << name << '\n';
         cout << "Cost: " << cost << '\n';
+        cout << "Top Speed: " << topSpeed << '\n';
         cout << "Battery Type: " << batteryType << '\n';
     }
 };
@@ -63,5 +64,6 @@ public:
 int main()
 {
     ElectricCar e1("BMW iX", 11600000, "Lithium Ion");
+    e1.setTopSpeed(300);
     e1.printInfo();
 }

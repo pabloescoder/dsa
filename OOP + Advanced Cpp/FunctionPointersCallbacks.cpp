@@ -43,7 +43,7 @@ void bubbleSort(int arr[], int n, int (*comparator)(int, int))
     {
         for (int j = 0; j < n - i - 1; j++)
         {
-            // Swaps if comparator returns -ve value
+            // Swaps if comparator returns +ve value
             if (comparator(arr[j], arr[j + 1]) > 0)
             {
                 int temp = arr[j];

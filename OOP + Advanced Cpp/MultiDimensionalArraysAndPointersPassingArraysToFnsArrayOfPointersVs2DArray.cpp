@@ -40,7 +40,7 @@ int main()
     cout << "-> ptr[0] = " << ptr[0] << '\n';
     cout << "-> *ptr[0] = " << *ptr[0] << '\n';
     cout << "-> ptr[0][2] = " << ptr[0][2] << '\n';
-    cout << "-> *((*ptr + 0) + 2) = " << *((*ptr + 0) + 2) << '\n';
+    cout << "-> *(*(ptr + 0) + 2) = " << *(*(ptr + 0) + 2) << '\n';
     cout << "ptr[0] is equivalent to *(ptr + 0)\n";
     cout << "*ptr[0] is equivalent to *(*(ptr + 0))\n";
     cout << "ptr[0][2] is equivalent to *(*(ptr + 0) + 2)\n\n";
