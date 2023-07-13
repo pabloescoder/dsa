@@ -84,6 +84,7 @@ public:
         while (temp != nullptr && currIdx != index - 1)
         {
             temp = temp->next;
+            currIdx++;
         }
 
         if (temp == nullptr)
