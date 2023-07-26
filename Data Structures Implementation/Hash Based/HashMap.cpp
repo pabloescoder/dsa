@@ -40,14 +40,14 @@ public:
         return false;
     }
 
-    string &operator[](int idx) // Overloading the index operator so that we can get values by keys
+    string &operator[](int key) // Overloading the index operator so that we can get values by keys
     {
-        int index = hashFunction(idx);
-        if (search(index))
+        int index = hashFunction(key);
+        if (search(key))
         {
             for (auto it = container[index].begin(); it != container[index].end(); it++)
             {
-                if (it->first == idx)
+                if (it->first == key)
                 {
                     return it->second;
                 }
@@ -84,14 +84,14 @@ public:
         }
     }
 
-    void remove(int idx)
+    void remove(int key)
     {
-        if (search(idx))
+        if (search(key))
         {
-            int index = hashFunction(idx);
+            int index = hashFunction(key);
             for (auto it = container[index].begin(); it != container[index].end(); it++)
             {
-                if (it->first == idx)
+                if (it->first == key)
                 {
                     container[index].erase(it);
                     cout << "Key " << it->first << " with data " << it->second << " removed from the HashSet.\n";
@@ -101,7 +101,7 @@ public:
         }
         else
         {
-            cout << "Key " << idx << " is not present in the HashMap.\n";
+            cout << "Key " << key << " is not present in the HashMap.\n";
         }
     }
 

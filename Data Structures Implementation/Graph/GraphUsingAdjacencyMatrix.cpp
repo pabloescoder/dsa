@@ -27,7 +27,7 @@ public:
 
     void addEdge(int firstVtx, int secondVtx)
     {
-        if (firstVtx >= adj.size() || secondVtx >= adj.size())
+        if (firstVtx > adj.size() || secondVtx > adj.size())
             cout << "Error: One or more vertices are not present in the graph\n";
 
         adj[firstVtx][secondVtx] = 1;

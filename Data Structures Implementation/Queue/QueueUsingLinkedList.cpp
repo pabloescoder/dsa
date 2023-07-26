@@ -53,14 +53,13 @@ public:
         }
         if (frontP == rearP)
         {
+            delete frontP;
             frontP = nullptr;
             rearP = nullptr;
             return;
         }
         Node *temp = frontP;
         frontP = frontP->next;
-        if (frontP == nullptr)
-            rearP = nullptr;
         delete temp;
     }
 

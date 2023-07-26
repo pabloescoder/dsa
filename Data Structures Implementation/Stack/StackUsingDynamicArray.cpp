@@ -31,6 +31,7 @@ public:
     {
         arr = new int[initialSize];
         maxSize = initialSize;
+        topIdx = -1;
     }
 
     void push(int data)

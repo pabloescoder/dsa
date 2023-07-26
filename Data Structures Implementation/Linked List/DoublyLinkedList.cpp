@@ -61,15 +61,24 @@ public:
     void insertAt(int index, int data)
     {
         Node *newNode = new Node(data);
-        if (!head && index != 0)
+        if (!head)
         {
-            cout << "Error! Index out of bounds.\n";
+            if (index != 0)
+            {
+                cout << "Error! Index out of bounds.\n";
+            }
+            else
+            {
+                head = newNode;
+                tail = newNode;
+            }
             return;
         }
-        else if (!head)
+        else if (index == 0)
         {
+            head->prev = newNode;
+            newNode->next = head;
             head = newNode;
-            tail = newNode;
             return;
         }
 
